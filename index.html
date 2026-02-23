@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Los 2 Pibes – Materiales de Construcción</title>
+    <meta name="description"
+        content="Venta de materiales de construcción en Grand Bourg. Arena, ladrillos, cemento y más. Entrega inmediata en zona norte." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,8 +16,8 @@
 
     <style>
         :root {
-            --orange: #E86019;
-            --orange2: #FF7A2F;
+            --brand-red: #E31E24;
+            --brand-blue: #2B3990;
             --cement: #6B6B6B;
             --concrete: #3A3A3A;
             --iron: #252525;
@@ -75,14 +77,14 @@
         .accent-line {
             width: 50px;
             height: 4px;
-            background: var(--orange);
+            background: var(--brand-red);
             display: block;
         }
 
         .accent-line-lg {
             width: 80px;
             height: 5px;
-            background: var(--orange);
+            background: var(--brand-red);
             display: block;
         }
 
@@ -102,7 +104,7 @@
             right: -15%;
             width: 60%;
             height: 130%;
-            background: linear-gradient(160deg, var(--orange) 0%, #b84c12 100%);
+            background: linear-gradient(160deg, var(--brand-red) 0%, #b84c12 100%);
             clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
             opacity: .08;
         }
@@ -114,7 +116,7 @@
             left: 0;
             right: 0;
             height: 6px;
-            background: repeating-linear-gradient(90deg, var(--orange) 0px, var(--orange) 20px, var(--iron) 20px, var(--iron) 40px);
+            background: repeating-linear-gradient(90deg, var(--brand-red) 0px, var(--brand-red) 20px, var(--iron) 20px, var(--iron) 40px);
         }
 
         .logo-circle {
@@ -126,12 +128,12 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            border: 3px solid var(--orange);
+            border: 3px solid var(--brand-red);
             flex-shrink: 0;
         }
 
         .ticker-bar {
-            background: var(--orange);
+            background: var(--brand-red);
             overflow: hidden;
             white-space: nowrap;
         }
@@ -177,7 +179,7 @@
             left: 0;
             width: 4px;
             height: 100%;
-            background: var(--orange);
+            background: var(--brand-red);
             transform: scaleY(0);
             transform-origin: bottom;
             transition: transform .25s ease;
@@ -213,7 +215,7 @@
         .feature-icon {
             width: 42px;
             height: 42px;
-            background: var(--orange);
+            background: var(--brand-red);
             border-radius: 3px;
             display: flex;
             align-items: center;
@@ -244,7 +246,7 @@
         }
 
         .btn-orange {
-            background: var(--orange);
+            background: var(--brand-red);
             color: #fff;
             font-family: 'Bebas Neue', sans-serif;
             letter-spacing: .1em;
@@ -271,7 +273,7 @@
         }
 
         .btn-orange:hover {
-            background: var(--orange2);
+            background: var(--brand-blue);
             transform: translateY(-2px);
         }
 
@@ -295,7 +297,7 @@
         }
 
         .btn-outline:hover {
-            border-color: var(--orange);
+            border-color: var(--brand-red);
             background: rgba(232, 96, 25, .08);
         }
 
@@ -368,7 +370,7 @@
         }
 
         .hazard-border {
-            background: repeating-linear-gradient(-45deg, var(--orange), var(--orange) 8px, var(--iron) 8px, var(--iron) 16px);
+            background: repeating-linear-gradient(-45deg, var(--brand-red), var(--brand-red) 8px, var(--iron) 8px, var(--iron) 16px);
             height: 8px;
             width: 100%;
         }
@@ -379,7 +381,7 @@
             font-weight: 600;
             letter-spacing: .2em;
             text-transform: uppercase;
-            color: var(--orange);
+            color: var(--brand-red);
         }
 
         .cat-consult {
@@ -392,8 +394,8 @@
             text-transform: uppercase;
             padding: 6px 12px;
             border-radius: 3px;
-            border: 1px solid var(--orange);
-            color: var(--orange);
+            border: 1px solid var(--brand-red);
+            color: var(--brand-red);
             text-decoration: none;
             transition: background .18s;
             margin-top: 12px;
@@ -401,6 +403,74 @@
 
         .cat-consult:hover {
             background: rgba(232, 96, 25, .15);
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.25rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+            outline: none;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease-out;
+            color: var(--gray-lt);
+            font-size: .95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.25rem;
+        }
+
+        .faq-icon {
+            transition: transform .3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .brand-logo {
+            filter: grayscale(1) opacity(0.5);
+            transition: all .3s ease;
+        }
+
+        .brand-logo:hover {
+            filter: grayscale(0) opacity(1);
+            transform: scale(1.05);
+        }
+
+        .testimonial-card {
+            background: var(--concrete);
+            border: 1px solid rgba(255, 255, 255, .05);
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .testimonial-card::after {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: rgba(232, 96, 25, .1);
+            line-height: 1;
         }
     </style>
 </head>
@@ -411,19 +481,7 @@
     <nav class="steel-bg border-b border-white/[.06] px-5 py-3 flex items-center justify-between sticky top-0 z-50">
         <div class="flex items-center gap-3">
             <div class="logo-circle">
-                <svg viewBox="0 0 72 72" width="62" height="62">
-                    <circle cx="36" cy="36" r="35" fill="white" stroke="#E86019" stroke-width="2" />
-                    <text x="36" y="22" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="6.5"
-                        font-weight="900" fill="#1a1a1a" letter-spacing="0.5">LOS 2 PIBES</text>
-                    <text x="36" y="29" text-anchor="middle" font-family="Arial,sans-serif" font-size="4" fill="#555"
-                        letter-spacing="0.2">MATERIALES DE CONSTRUCCION</text>
-                    <polygon points="36,40 25,50 47,50" fill="#E86019" />
-                    <rect x="27" y="50" width="18" height="11" fill="#CC3333" />
-                    <rect x="33" y="54" width="5" height="7" fill="#1a1a1a" />
-                    <rect x="40" y="45" width="4" height="5" fill="#CC3333" />
-                    <text x="36" y="66" text-anchor="middle" font-family="Arial,sans-serif" font-size="3.5"
-                        fill="#3A3A3A" letter-spacing="0.3">NICOLAS INGRATTA E HIJOS</text>
-                </svg>
+                <img loading="lazy" src="assets/logo.png" alt="Los 2 Pibes Logo" class="w-full h-full object-contain">
             </div>
             <div>
                 <div class="bebas text-white text-xl leading-none tracking-widest">LOS 2 PIBES</div>
@@ -433,9 +491,9 @@
         </div>
         <div class="flex flex-col items-end gap-0.5">
             <a href="tel:023204800117"
-                class="condensed text-gray-400 text-xs hover:text-orange-400 transition">02320-480117</a>
+                class="condensed text-gray-400 text-xs hover:text-red-400 transition">02320-480117</a>
             <a href="tel:023204850000"
-                class="condensed text-gray-400 text-xs hover:text-orange-400 transition">02320-485000</a>
+                class="condensed text-gray-400 text-xs hover:text-red-400 transition">02320-485000</a>
         </div>
     </nav>
 
@@ -466,7 +524,7 @@
         <div class="relative z-10 max-w-md mx-auto w-full">
             <div class="reveal d1 flex items-center gap-2 mb-5">
                 <span
-                    style="width:32px;height:6px;background:repeating-linear-gradient(-45deg,var(--orange),var(--orange) 4px,transparent 4px,transparent 8px);flex-shrink:0;display:block"></span>
+                    style="width:32px;height:6px;background:repeating-linear-gradient(-45deg,var(--brand-red),var(--brand-red) 4px,transparent 4px,transparent 8px);flex-shrink:0;display:block"></span>
                 <span class="section-label">Grand Bourg, Buenos Aires</span>
             </div>
 
@@ -474,7 +532,7 @@
                 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(3.2rem,14vw,4rem); letter-spacing:.04em;">
                 MATERIALES<br />
                 DE<br />
-                <span style="color:var(--orange); text-shadow:2px 2px 0 rgba(0,0,0,.4)">CONSTRUCCIÓN</span>
+                <span style="color:var(--brand-red); text-shadow:2px 2px 0 rgba(0,0,0,.4)">CONSTRUCCIÓN</span>
             </h1>
 
             <span class="accent-line-lg reveal d3 mt-4 mb-5 block"></span>
@@ -484,9 +542,26 @@
                 <strong class="text-gray-200">20+ años</strong> sirviendo a Grand Bourg y la zona.
             </p>
 
-            <div class="reveal d5 flex gap-3 mt-8 flex-wrap">
-                <a href="https://wa.me/541130401604?text=Hola!%20Quiero%20un%20presupuesto" target="_blank"
-                    class="btn-orange">
+            <!-- SHIPPING ZONE SELECTOR -->
+            <div class="reveal d5 mb-6 mt-8">
+                <label for="shipping-zone"
+                    class="condensed text-[10px] text-gray-500 uppercase tracking-widest block mb-2">Seleccioná tu zona
+                    de envío</label>
+                <div class="relative max-w-[280px]">
+                    <select id="shipping-zone"
+                        class="w-full bg-[#1a1a1a] border border-white/10 text-white p-3 rounded appearance-none condensed text-sm focus:border-brand-red outline-none transition cursor-pointer">
+                        <option value="Grand Bourg">Grand Bourg</option>
+                        <option value="Tierras Altas">Tierras Altas</option>
+                        <option value="Tortuguitas">Tortuguitas</option>
+                        <option value="Otra zona">Otra zona (Consultar)</option>
+                    </select>
+                    <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-brand-red">▼</div>
+                </div>
+            </div>
+
+            <div class="reveal d6 flex gap-3 flex-wrap">
+                <a href="https://wa.me/541130401604?text=Hola!%20Quiero%20un%20presupuesto.%20Estoy%20en%20Grand%20Bourg."
+                    id="main-wa-btn" target="_blank" class="btn-orange">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                         <path
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -499,28 +574,29 @@
             <div class="reveal d5 mt-6 inline-flex items-center gap-2 px-4 py-2 rounded"
                 style="background:rgba(232,96,25,.1); border:1px solid rgba(232,96,25,.25)">
                 <span>🚚</span>
-                <span class="condensed text-sm text-gray-300 tracking-wide">Entrega a domicilio disponible</span>
+                <span class="condensed text-sm text-gray-300 tracking-wide">Entrega a domicilio en <strong
+                        class="text-brand-red">24 HORAS</strong></span>
             </div>
         </div>
 
         <div class="relative z-10 max-w-md mx-auto w-full mt-12 grid grid-cols-3 gap-px"
             style="background:rgba(255,255,255,.06); border-radius:4px; overflow:hidden">
             <div class="concrete-bg py-4 text-center px-2">
-                <div class="bebas text-3xl" style="color:var(--orange)">20+</div>
+                <div class="bebas text-3xl" style="color:var(--brand-red)">20+</div>
                 <div class="condensed text-xs text-gray-500 uppercase tracking-wider mt-0.5">Años en zona</div>
             </div>
             <div class="concrete-bg py-4 text-center px-2">
-                <div class="bebas text-3xl" style="color:var(--orange)">★ 4.3</div>
+                <div class="bebas text-3xl" style="color:var(--brand-red)">★ 4.3</div>
                 <div class="condensed text-xs text-gray-500 uppercase tracking-wider mt-0.5">126 reseñas</div>
             </div>
             <div class="concrete-bg py-4 text-center px-2">
-                <div class="bebas text-3xl" style="color:var(--orange)">ZONA</div>
+                <div class="bebas text-3xl" style="color:var(--brand-red)">ZONA</div>
                 <div class="condensed text-xs text-gray-500 uppercase tracking-wider mt-0.5">Grand Bourg</div>
             </div>
         </div>
     </section>
 
-    <div class="hazard-border"></div>
+
 
     <!-- CATÁLOGO -->
     <section id="catalogo" class="py-14 px-5 concrete-bg">
@@ -602,7 +678,7 @@
         </div>
     </section>
 
-    <div class="hazard-border" style="transform:scaleX(-1)"></div>
+
 
     <!-- POR QUÉ ELEGIRNOS -->
     <section class="py-14 px-5 steel-bg">
@@ -611,7 +687,8 @@
                 <span class="accent-line"></span>
                 <span class="section-label">Nuestra propuesta</span>
             </div>
-            <h2 class="bebas text-5xl text-white mb-8">¿POR QUÉ<br /><span style="color:var(--orange)">ELEGIRNOS?</span>
+            <h2 class="bebas text-5xl text-white mb-8">¿POR QUÉ<br /><span
+                    style="color:var(--brand-red)">ELEGIRNOS?</span>
             </h2>
 
             <div>
@@ -664,6 +741,96 @@
         </div>
     </section>
 
+    <!-- TESTIMONIOS -->
+    <section class="py-14 px-5 concrete-bg">
+        <div class="max-w-md mx-auto">
+            <div class="flex items-center gap-3 mb-2">
+                <span class="accent-line"></span>
+                <span class="section-label">Lo que dicen de nosotros</span>
+            </div>
+            <h2 class="bebas text-5xl text-white mb-8">CLIENTES<br /><span
+                    style="color:var(--brand-red)">SATISFECHOS</span></h2>
+
+            <div class="space-y-4">
+                <div class="testimonial-card p-6">
+                    <div class="flex gap-1 mb-2">
+                        <span class="text-red-600">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 italic text-sm mb-4">"La mejor atención y cordialidad, todo para la
+                        construcción, envíos y rapidez muy recomendable, soy cliente hace muchos años"</p>
+                    <div class="bebas text-white tracking-wider">ROBERTO GONZALEZ</div>
+                </div>
+
+                <div class="testimonial-card p-6 border-l-4 border-l-red-600">
+                    <div class="flex gap-1 mb-2">
+                        <span class="text-red-600">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 italic text-sm mb-4">"Somos clientes segunda generacion mi padre
+                        compraba...y continuo sus obras..buen precio y calidad confianza"</p>
+                    <div class="bebas text-white tracking-wider">RODOLFO DIAZ</div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="https://maps.app.goo.gl/uTezn74QeG5692iu9" target="_blank"
+                    class="condensed text-xs text-gray-500 hover:text-red-400 transition underline tracking-widest">VER
+                    TODAS LAS RESEÑAS EN GOOGLE MAPS</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="hazard-border"></div>
+
+    <!-- FAQ -->
+    <section class="py-14 px-5 steel-bg">
+        <div class="max-w-md mx-auto">
+            <div class="flex items-center gap-3 mb-2">
+                <span class="accent-line"></span>
+                <span class="section-label">Tus dudas resueltas</span>
+            </div>
+            <h2 class="bebas text-5xl text-white mb-8">PREGUNTAS<br /><span
+                    style="color:var(--brand-red)">FRECUENTES</span></h2>
+
+            <div class="faq-accordion mt-6">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="condensed font-bold uppercase tracking-wide">¿Hacen envíos a domicilio?</span>
+                        <span class="faq-icon text-red-600 text-2xl">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Sí, contamos con flota propia para garantizar entregas en <strong class="text-brand-red">24
+                            HORAS</strong> en Grand Bourg, Tortuguitas, Los
+                        Polvorines y zonas aledañas. Priorizamos la rapidez para que tu obra no se detenga.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="condensed font-bold uppercase tracking-wide">¿Tienen stock permanente?</span>
+                        <span class="faq-icon text-red-600 text-2xl">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Mantenemos stock constante de los materiales básicos (arena, cemento, hierro, ladrillos). Para
+                        productos especiales, te recomendamos consultar por WhatsApp antes de venir.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="condensed font-bold uppercase tracking-wide">¿Qué formas de pago aceptan?</span>
+                        <span class="faq-icon text-red-600 text-2xl">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Aceptamos <strong class="text-brand-red">efectivo, tarjetas, Mercado Pago y
+                            transferencia</strong> bancaria.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hazard-border" style="transform:scaleX(-1)"></div>
+
     <!-- UBICACIÓN Y CONTACTO -->
     <section id="contacto" class="py-14 px-5 concrete-bg">
         <div class="max-w-md mx-auto">
@@ -672,7 +839,7 @@
                 <span class="section-label">Visitanos</span>
             </div>
             <h2 class="bebas text-5xl text-white mb-6">UBICACIÓN &<br /><span
-                    style="color:var(--orange)">CONTACTO</span></h2>
+                    style="color:var(--brand-red)">CONTACTO</span></h2>
 
             <div class="rounded overflow-hidden mb-6" style="border:1px solid rgba(255,255,255,.07)">
                 <iframe
@@ -705,9 +872,9 @@
                     <div>
                         <div class="condensed text-xs text-gray-500 uppercase tracking-widest">Teléfonos fijos</div>
                         <a href="tel:023204800117"
-                            class="text-white text-sm mt-0.5 block hover:text-orange-400 transition">02320-480117</a>
+                            class="text-white text-sm mt-0.5 block hover:text-red-400 transition">02320-480117</a>
                         <a href="tel:023204850000"
-                            class="text-white text-sm block hover:text-orange-400 transition">02320-485000</a>
+                            class="text-white text-sm block hover:text-red-400 transition">02320-485000</a>
                     </div>
                 </div>
                 <div class="contact-row" style="border-bottom:none">
@@ -762,6 +929,58 @@
         Presupuesto rápido
     </a>
 
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // WhatsApp Dynamic Zone Logic
+        const zoneSelector = document.getElementById('shipping-zone');
+        const waBtn = document.getElementById('main-wa-btn');
+
+        if (zoneSelector && waBtn) {
+            zoneSelector.addEventListener('change', () => {
+                const zone = zoneSelector.value;
+                const baseText = "Hola! Quiero un presupuesto.";
+                const encodedText = encodeURIComponent(`${baseText} Estoy en ${zone}.`);
+                waBtn.href = `https://wa.me/541130401604?text=${encodedText}`;
+            });
+        }
+
+        // Simple Reveal on Scroll (Optional enrichment)
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            // Only add if not already reveal dX
+            if (!el.classList.contains('reveal')) {
+                observer.observe(el);
+            }
+        });
+    </script>
 </body>
 
 </html>
