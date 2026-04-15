@@ -405,7 +405,7 @@
             background: rgba(232, 96, 25, .15);
         }
 
-        /* FAQ Accordion */
+
         .faq-item {
             border-bottom: 1px solid rgba(255, 255, 255, .07);
         }
@@ -445,13 +445,19 @@
             transform: rotate(45deg);
         }
 
-        .brand-logo {
-            filter: grayscale(1) opacity(0.5);
-            transition: all .3s ease;
+        .brand-img-container {
+            background-color: var(--white);
+            padding: 8px 16px;
+            border-radius: 6px;
         }
 
-        .brand-logo:hover {
-            filter: grayscale(0) opacity(1);
+        .brand-img {
+            transition: all .3s ease;
+            object-fit: contain;
+            max-width: 120px;
+        }
+
+        .brand-img-container:hover .brand-img {
             transform: scale(1.05);
         }
 
@@ -477,7 +483,7 @@
 
 <body>
 
-    <!-- NAV -->
+
     <nav class="steel-bg border-b border-white/[.06] px-5 py-3 flex items-center justify-between sticky top-0 z-50">
         <div class="flex items-center gap-3">
             <div class="logo-circle">
@@ -497,7 +503,7 @@
         </div>
     </nav>
 
-    <!-- TICKER -->
+
     <div class="ticker-bar">
         <div class="ticker-inner">
             <span class="ticker-item">🚚 Entrega a domicilio</span>
@@ -515,7 +521,7 @@
         </div>
     </div>
 
-    <!-- HERO -->
+
     <section class="hero px-5 pt-10 pb-20">
         <div
             style="position:absolute; bottom:10px; right:-10px; font-family:'Bebas Neue',sans-serif; font-size:160px; line-height:1; color:rgba(255,255,255,.025); pointer-events:none; user-select:none;">
@@ -530,19 +536,19 @@
 
             <h1 class="reveal d2 leading-none text-white"
                 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(3.2rem,14vw,4rem); letter-spacing:.04em;">
-                MATERIALES<br />
-                DE<br />
-                <span style="color:var(--brand-red); text-shadow:2px 2px 0 rgba(0,0,0,.4)">CONSTRUCCIÓN</span>
+                TU CORRALÓN DE<br />
+                <span style="color:var(--brand-red); text-shadow:2px 2px 0 rgba(0,0,0,.4)">CONFIANZA</span><br />
+                <span style="font-size: clamp(2rem, 8vw, 2.5rem);">EN EL CORAZÓN DE GRAND BOURG</span>
             </h1>
 
             <span class="accent-line-lg reveal d3 mt-4 mb-5 block"></span>
 
             <p class="reveal d4 text-gray-400 text-base leading-relaxed max-w-xs">
                 Áridos, ladrillos, hierro, cemento y todo lo que la obra necesita.
-                <strong class="text-gray-200">20+ años</strong> sirviendo a Grand Bourg y la zona.
+                <br /><strong class="text-gray-200">Llegamos a todo Grand Bourg y alrededores.</strong>
             </p>
 
-            <!-- SHIPPING ZONE SELECTOR -->
+
             <div class="reveal d5 mb-6 mt-8">
                 <label for="shipping-zone"
                     class="condensed text-[10px] text-gray-500 uppercase tracking-widest block mb-2">Seleccioná tu zona
@@ -597,8 +603,50 @@
     </section>
 
 
+    <section class="py-10 px-5" style="border-bottom:1px solid rgba(255,255,255,0.05); background:rgba(0,0,0,0.2);">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-6 items-center">
+                <div class="relative flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/lomanegra.png" alt="Loma Negra" class="brand-img" style="height:45px;">
+                    <span
+                        class="absolute -top-3 -right-6 bg-red-600 text-white text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-widest whitespace-nowrap">Marcas
+                        con las que trabajamos</span>
+                </div>
+                <div class="relative flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/klaukol.png" alt="Klaukol" class="brand-img" style="height:45px;">
+                    <span
+                        class="absolute -top-3 -right-6 bg-red-600 text-white text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-widest whitespace-nowrap">Distribuidor
+                        Oficial</span>
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/weber.png" alt="Weber" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/durlock.png" alt="Durlock" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/acindar.png" alt="Acindar" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/mapei.png" alt="Mapei" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/ingco.png" alt="Ingco" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/total.png" alt="Total" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/poxipol.png" alt="Poxipol" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/Later-Cer.png" alt="Later Cer" class="brand-img" style="height:45px;">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- CATÁLOGO -->
+
     <section id="catalogo" class="py-14 px-5 concrete-bg">
         <div class="max-w-md mx-auto">
             <div class="flex items-center gap-3 mb-2">
@@ -614,10 +662,10 @@
                 <div class="cat-card p-4">
                     <span class="cat-num">01</span>
                     <div class="text-3xl mb-3">🪨</div>
-                    <h3 class="bebas text-xl text-white leading-tight">Áridos</h3>
+                    <h3 class="bebas text-xl text-white leading-tight">Áridos y Bolsones</h3>
                     <p class="text-gray-500 text-xs mt-1 leading-snug">Arena, piedra, cascajo, tosca, granza</p>
-                    <a href="https://wa.me/541130401604?text=Hola!%20Consulta%20sobre%20áridos" target="_blank"
-                        class="cat-consult">Consultar →</a>
+                    <a href="https://wa.me/541130401604?text=Hola!%20Consulta%20sobre%20áridos%20y%20bolsones"
+                        target="_blank" class="cat-consult">Consultar →</a>
                 </div>
 
                 <div class="cat-card p-4">
@@ -632,10 +680,10 @@
                 <div class="cat-card p-4">
                     <span class="cat-num">03</span>
                     <div class="text-3xl mb-3">🏗️</div>
-                    <h3 class="bebas text-xl text-white leading-tight">Cemento</h3>
-                    <p class="text-gray-500 text-xs mt-1 leading-snug">Portland, Loma Negra, cal, yeso</p>
-                    <a href="https://wa.me/541130401604?text=Hola!%20Consulta%20sobre%20cemento" target="_blank"
-                        class="cat-consult">Consultar →</a>
+                    <h3 class="bebas text-xl text-white leading-tight">Bolsas de Cemento</h3>
+                    <p class="text-gray-500 text-xs mt-1 leading-snug">Cemento Loma Negra, portland, cal, yeso</p>
+                    <a href="https://wa.me/541130401604?text=Hola!%20Consulta%20sobre%20bolsas%20de%20cemento"
+                        target="_blank" class="cat-consult">Consultar →</a>
                 </div>
 
                 <div class="cat-card p-4">
@@ -650,19 +698,42 @@
                 <div class="cat-card p-4">
                     <span class="cat-num">05</span>
                     <div class="text-3xl mb-3">🪣</div>
-                    <h3 class="bebas text-xl text-white leading-tight">Revoques</h3>
-                    <p class="text-gray-500 text-xs mt-1 leading-snug">Revoque fino, grueso, adhesivos, pegamentos</p>
-                    <a href="https://wa.me/541130401604?text=Hola!%20Consulta%20sobre%20revoques" target="_blank"
-                        class="cat-consult">Consultar →</a>
+                    <h3 class="bebas text-xl text-white leading-tight">Construcción en Seco</h3>
+                    <p class="text-gray-500 text-xs mt-1 leading-snug">Placas Durlock, perfilería, revoques proyectables
+                    </p>
+                    <a href="https://wa.me/541130401604?text=Hola!%20Consulta%20sobre%20construccion%20en%20seco"
+                        target="_blank" class="cat-consult">Consultar →</a>
                 </div>
 
                 <div class="cat-card p-4">
                     <span class="cat-num">06</span>
-                    <div class="text-3xl mb-3">💧</div>
-                    <h3 class="bebas text-xl text-white leading-tight">Imperme&shy;abilizantes</h3>
-                    <p class="text-gray-500 text-xs mt-1 leading-snug">Membrana, sika, hidrófugos, tejas</p>
-                    <a href="https://wa.me/541130401604?text=Hola!%20Consulta%20sobre%20impermeabilizantes"
-                        target="_blank" class="cat-consult">Consultar →</a>
+                    <div class="text-3xl mb-3">🚽</div>
+                    <h3 class="bebas text-xl text-white leading-tight">Sanitarios y Plomería</h3>
+                    <p class="text-gray-500 text-xs mt-1 leading-snug">Cañerías (PVC y Fusión), cerámicos y accesorios
+                    </p>
+                    <a href="https://wa.me/541130401604?text=Hola!%20Consulta%20sobre%20sanitarios" target="_blank"
+                        class="cat-consult">Consultar →</a>
+                </div>
+
+                <div class="cat-card p-5 col-span-2"
+                    style="background: linear-gradient(135deg, rgba(227, 30, 36, 0.1) 0%, rgba(0,0,0,0) 100%); border-color: var(--brand-red);">
+                    <span class="cat-num" style="color: rgba(227, 30, 36, 0.2)">07</span>
+                    <div class="flex flex-col gap-2">
+                        <div>
+                            <div class="text-4xl mb-2">🛠️</div>
+                            <h3 class="bebas text-3xl text-white leading-tight">Maquinarias</h3>
+                            <div
+                                class="inline-block px-2 py-1 mt-1 text-[10px] uppercase tracking-wider bg-red-600 text-white rounded font-bold">
+                                Venta de Máquinas</div>
+                            <p class="text-gray-300 text-sm mt-3 leading-snug max-w-sm">Las mejores herramientas para tu
+                                obra: termofusoras para cañerías, cortadoras de cerámica, amoladoras, taladros y mucho
+                                más.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/541130401604?text=Hola!%20Me%20interesan%20las%20maquinas%20de%20fusion%20y%20ceramica"
+                        target="_blank"
+                        class="cat-consult mt-4 bg-red-600 text-white hover:bg-red-700 w-full md:w-auto inline-block"
+                        style="border:none; color:white;">Consultar Equipos →</a>
                 </div>
 
             </div>
@@ -680,12 +751,12 @@
 
 
 
-    <!-- POR QUÉ ELEGIRNOS -->
+
     <section class="py-14 px-5 steel-bg">
         <div class="max-w-md mx-auto">
             <div class="flex items-center gap-3 mb-2">
                 <span class="accent-line"></span>
-                <span class="section-label">Nuestra propuesta</span>
+                <span class="section-label">Trayectoria y Confianza</span>
             </div>
             <h2 class="bebas text-5xl text-white mb-8">¿POR QUÉ<br /><span
                     style="color:var(--brand-red)">ELEGIRNOS?</span>
@@ -741,7 +812,7 @@
         </div>
     </section>
 
-    <!-- TESTIMONIOS -->
+
     <section class="py-14 px-5 concrete-bg">
         <div class="max-w-md mx-auto">
             <div class="flex items-center gap-3 mb-2">
@@ -781,7 +852,7 @@
 
     <div class="hazard-border"></div>
 
-    <!-- FAQ -->
+
     <section class="py-14 px-5 steel-bg">
         <div class="max-w-md mx-auto">
             <div class="flex items-center gap-3 mb-2">
@@ -831,7 +902,7 @@
 
     <div class="hazard-border" style="transform:scaleX(-1)"></div>
 
-    <!-- UBICACIÓN Y CONTACTO -->
+
     <section id="contacto" class="py-14 px-5 concrete-bg">
         <div class="max-w-md mx-auto">
             <div class="flex items-center gap-3 mb-2">
@@ -903,7 +974,7 @@
 
     <div class="hazard-border"></div>
 
-    <!-- FOOTER -->
+
     <footer class="py-8 px-5 steel-bg text-center">
         <div class="bebas text-2xl text-white tracking-[.15em]">LOS 2 PIBES</div>
         <div class="condensed text-gray-600 text-xs tracking-widest uppercase mt-1">Nicolás Ingratta e Hijos</div>
@@ -916,10 +987,15 @@
             <a href="https://wa.me/541130401604" target="_blank" class="condensed text-xs hover:opacity-80 transition"
                 style="color:rgba(37,211,102,.6)">📲 11 3040-1604</a>
         </div>
-        <div class="mt-5 text-gray-700 text-xs">© 2026 Los 2 Pibes · Materiales de Construcción</div>
+        <div class="mt-5 text-gray-700 text-xs">
+            © 2026 Los 2 Pibes · Materiales de Construcción<br>
+            <a href="https://todoviv.ar" target="_blank"
+                class="inline-block mt-2 opacity-60 hover:opacity-100 transition"
+                style="border-bottom: 1px dotted rgba(255,255,255,0.2)">Catálogo online por todoviv.ar</a>
+        </div>
     </footer>
 
-    <!-- WHATSAPP FLOTANTE -->
+
     <a href="https://wa.me/541130401604?text=Hola!%20Quiero%20un%20presupuesto%20r%C3%A1pido" target="_blank"
         class="wa-float">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white">
@@ -930,25 +1006,25 @@
     </a>
 
     <script>
-        // FAQ Accordion Logic
+
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const faqItem = button.parentElement;
                 const isActive = faqItem.classList.contains('active');
 
-                // Close all other items
+
                 document.querySelectorAll('.faq-item').forEach(item => {
                     item.classList.remove('active');
                 });
 
-                // Toggle current item
+
                 if (!isActive) {
                     faqItem.classList.add('active');
                 }
             });
         });
 
-        // WhatsApp Dynamic Zone Logic
+
         const zoneSelector = document.getElementById('shipping-zone');
         const waBtn = document.getElementById('main-wa-btn');
 
@@ -961,7 +1037,7 @@
             });
         }
 
-        // Simple Reveal on Scroll (Optional enrichment)
+
         const observerOptions = {
             threshold: 0.1
         };
@@ -975,7 +1051,7 @@
         }, observerOptions);
 
         document.querySelectorAll('section > div').forEach(el => {
-            // Only add if not already reveal dX
+
             if (!el.classList.contains('reveal')) {
                 observer.observe(el);
             }
