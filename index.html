@@ -478,6 +478,39 @@
             color: rgba(232, 96, 25, .1);
             line-height: 1;
         }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .brand-marquee {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .brand-marquee-inner {
+            display: flex;
+            width: max-content;
+            animation: brand-ticker 35s linear infinite;
+        }
+
+        .brand-marquee-inner:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes brand-ticker {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
 
@@ -603,9 +636,47 @@
     </section>
 
 
-    <section class="py-10 px-5" style="border-bottom:1px solid rgba(255,255,255,0.05); background:rgba(0,0,0,0.2);">
-        <div class="max-w-4xl mx-auto">
-            <div class="flex flex-wrap justify-center gap-x-8 gap-y-6 items-center">
+    <section class="py-10" style="border-bottom:1px solid rgba(255,255,255,0.05); background:rgba(0,0,0,0.2); overflow:hidden;">
+        <div class="brand-marquee pt-4 pb-4" style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+            <div class="brand-marquee-inner items-center gap-x-6 md:gap-x-8 px-4 md:px-8">
+                <!-- Group 1 -->
+                <div class="relative flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/lomanegra.png" alt="Loma Negra" class="brand-img" style="height:45px;">
+                    <span
+                        class="absolute -top-3 -right-6 bg-red-600 text-white text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-widest whitespace-nowrap">Marcas
+                        con las que trabajamos</span>
+                </div>
+                <div class="relative flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/klaukol.png" alt="Klaukol" class="brand-img" style="height:45px;">
+                    <span
+                        class="absolute -top-3 -right-6 bg-red-600 text-white text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-widest whitespace-nowrap">Distribuidor
+                        Oficial</span>
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/weber.png" alt="Weber" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/durlock.png" alt="Durlock" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/acindar.png" alt="Acindar" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/mapei.png" alt="Mapei" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/ingco.png" alt="Ingco" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/total.png" alt="Total" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/poxipol.png" alt="Poxipol" class="brand-img" style="height:45px;">
+                </div>
+                <div class="flex items-center justify-center brand-img-container">
+                    <img src="assets/marcas/Later-Cer.png" alt="Later Cer" class="brand-img" style="height:45px;">
+                </div>
+                <!-- Group 2 -->
                 <div class="relative flex items-center justify-center brand-img-container">
                     <img src="assets/marcas/lomanegra.png" alt="Loma Negra" class="brand-img" style="height:45px;">
                     <span
